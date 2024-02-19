@@ -1,4 +1,4 @@
-import {Entity, model, property, belongsTo} from '@loopback/repository';
+import {Entity, belongsTo, model, property} from '@loopback/repository';
 import {Rol} from './rol.model';
 
 @model()
@@ -30,9 +30,9 @@ export class Usuario extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
-  clave: string;
+  clave?: string;
 
   @property({
     type: 'boolean',
